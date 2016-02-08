@@ -7,29 +7,74 @@ Use fullstack Javascript mobile first framework
 One branch per function
 
 
+## User Stories
+
+ * Users can register/sign up
+ * Users can record identity using same browser
+ * Users can record identity in a cookie
+ * Users must be signed in, record identity or cookie to create a new posts
+ * Posts can be created by providing a title and attaching an image
+ * Users can share image / images by generating a share url by tagging:
+  - location of viewier
+  - circle of viewer
+  - duration of sharing
+ * Users either receive sharing url or use buttons to share sharing url in social networks
+ * The image should be processed to generate thumbnail-sized images
+ * The homepage should list all the uploaded thumbnails that user has access to - users can click through to see full-sized images
+ * Images are hosted on S3. Stub calls to S3 for your test environment
+ * Ensure your S3 secret key is not stored on Github
+ * AI sets access to shared posts based on user feedback
+ * Viewer taken to preview page where posts comment and feedback prior to viewing
+ * Sharer tags viewer and/or post with circle, location and duration based on user feedback
+ * AI updates access algorithm
+
+
+## Domain Model
+
+# User Model (logged in)
+ * Fingerprints
+ * Tags
+ * Circles
+
+# PreUser (not logged in)
+ * Fingerprints
+ * Tags
+ * Circles
+
+# Fingerprint Model
+ * https://github.com/ezzye/fingerprintjs2
+ * Use time +/- 60 mins with geographic location based on day light time as part of fingerprint
+ * Fuzzy fingerprint
+ * Tag (use AI To tag and group into users)
+
+# Post
+ * Circles
+
+# Circle
+ * Users
+ * Locations
+ * Durations
+
+
+
+
 ## Functions
 
+Sign up and sign in
 
 Post image to share
 
 Tag share on circle it is proposd to share with
 
-Tag location of share
-
-Tag duration - perm, day,week, month, year
-
-
 Obtain share url
 
 Post share url
 
-Viewer posts comments, email and/or image to share and tags
+Viewer user posts comments, email and/or image to share
 
-AI sets access
+Sharer user tags viewer user with circle and decides access depending on comment etc
 
-Sharer tags viewer with circle, location and duration and decides access.
-
-AI compares actual  with prediction then updates AI.
+AI sets allocates tags to users
 
 
 ## User stories

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <%=title %>
+    </title>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href="https://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+
+</head>
+<body>
+    <% for(var i in messages) { %>
+    <div class="flash"><%= messages[i] %></div>
+    <% } %>
+
+    <div class="container">
+        <form class="form-signin" action="/signup" method="post">
+            <h2 class="form-signin-heading text-center">Sign up</h2>
+
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+
+            <label for="FirstName" class="sr-only">Name</label>
+            <input type="text" id="FirstName" name="firstName" class="form-control" placeholder="First Name" required autofocus>
+
+            <label for="LastName" class="sr-only">Name</label>
+            <input type="text" id="LastName" name="lastName" class="form-control" placeholder="Last Name" required autofocus>
+
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+
+            <input type="hidden" name="profile_picture" id="profile_picture" value="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
+            <input type="hidden" name="description" id="description" value="">
+            <input type="hidden" name="email" id="email" value="">
+            <!--<label for="desiredLocation" class="sr-only">Desired Location</label>-->
+            <!--<input type="text" name="desiredLocation" id="desiredLocation" class="form-control" placeholder="Desired Location" required>-->
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign up</button>
+          </form>
+
+          <div class="row">
+            <div class="center-block text-center">
+                <a href="/oauth/facebook">Login with Facebook</a> |
+                <a href="/oauth/twitter">Login with Twitter</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
