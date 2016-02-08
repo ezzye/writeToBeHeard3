@@ -1,4 +1,4 @@
-## A thinking social network.
+# A thinking social network.
 
 ## Approach
 
@@ -31,26 +31,26 @@ One branch per function
 
 ## Domain Model
 
-# User Model (logged in)
+### User Model (logged in)
  * Fingerprints
  * Tags
  * Circles
 
-# PreUser (not logged in)
+### PreUser (not logged in)
  * Fingerprints
  * Tags
  * Circles
 
-# Fingerprint Model
+### Fingerprint Model
  * https://github.com/ezzye/fingerprintjs2
  * Use time +/- 60 mins with geographic location based on day light time as part of fingerprint
  * Fuzzy fingerprint
  * Tag (use AI To tag and group into users)
 
-# Post
+### Post
  * Circles
 
-# Circle
+### Circle
  * Users
  * Locations
  * Durations
@@ -79,7 +79,7 @@ AI sets allocates tags to users
 
 ## User stories
 
-#1. As a user I want a site where I can post and share photos
+###1. As a user I want a site where I can post and share photos
 
 Just a thought.  But I'd really like a cool online branded site where
 I can put up old photos and date them and share them.  Not loads, just
@@ -101,7 +101,7 @@ instant which means I can't backdate it and I don't want to ruin
 actual moments by thinking I have to immediately share my pic.
 
 
-#2. As a user I want to control what, who and when I share.
+###2. As a user I want to control what, who and when I share.
 
 I also don't want just to use a plain photo site as there is a part of
 me that does want anyone snooping on me online to see what a great
@@ -119,7 +119,7 @@ pay at least £1 a month for that.  I am not alone in my struggles with
 facebook - but its the only option in many ways.
 
 
-#3. As a user I want to control how my information is displayed
+###3. As a user I want to control how my information is displayed
 
 Why "cool online branded site"?   I suppose it doesn't have to be, but
 just so it looks like a viable alternative.
@@ -193,7 +193,7 @@ well as having its own online presence.
 I would love if you made this - I'd def use it.
 
 
-#4. As a user I want to remember who I've shared with so that I can easily share with them again.
+###4. As a user I want to remember who I've shared with so that I can easily share with them again.
 
 Sorry, I am getting a bit carried away now, but just need to get this
 out.... (I am trying going without my thyroid med for a bit - I hope
@@ -232,36 +232,6 @@ Its about filtering and sharing my life history in a way that
 optimises my mental welbeing both now and in the future.
 
 Just an idea.  Thanks for reading;)
-
-
-
-
-
-
-
-So links to content must depend on the following:
--user initial location or perscribed location
--user initial time of viewing or precribed time
--user initial machine or prescried machine
--user initial login or prescribed login
--user initial face recognition or presribed face recognition
-
-Posts can:
--time out
--be groups of posts
-
-
-UX intuitively allows user to set conditions for link:
--use snap chat like hidden controls such as swipes
-
-
-
-
-
-
-
-
-
 
 
 # angular-seed — the seed for AngularJS apps
