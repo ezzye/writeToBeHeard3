@@ -26,10 +26,11 @@ var User = require('mongoose').model('User'),
 
     exports.renderSignin = function(req, res, next) {
         if (!req.user) {
-            res.render('signin', {
-                title: 'Sign-in Form',
-                messages: req.flash('error') || req.flash('info')
-            });
+            return res.redirect('/#/signin');
+            // res.render('signin', {
+            //     title: 'Sign-in Form',
+            //     messages: req.flash('error') || req.flash('info')
+            // });
         }
         else {
             return res.redirect('/');
@@ -38,10 +39,11 @@ var User = require('mongoose').model('User'),
 
     exports.renderSignup = function(req, res, next) {
         if (!req.user) {
-            res.render('signup', {
-                title: 'Sign- Form',
-                messages: req.flash('error')
-            });
+            return res.redirect('/#/signup');
+            // res.render('signup', {
+            //     title: 'Sign- Form',
+            //     messages: req.flash('error')
+            // });
         }
         else {
             return res.redirect('/');
@@ -58,7 +60,7 @@ var User = require('mongoose').model('User'),
                 if (err) {
                     var message = getErrorMessage(err);
                     req.flash('error', message);
-                    return res.redirect('/signup');
+                    return res.redirect('/#/signup');
                 }
                 req.login(user, function(err) {
                     if (err)

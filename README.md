@@ -6,6 +6,11 @@ Use fullstack Javascript mobile first framework
 
 One branch per function
 
+## Branches (with waffle)
+
+ 1. user_can_signup_signin_on_web
+ 2.
+
 
 ## User Stories
 

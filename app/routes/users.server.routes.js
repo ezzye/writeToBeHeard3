@@ -11,8 +11,8 @@ module.exports = function(app) {
         .get(users.renderSignin)
         .post(passport.authenticate('local', {
             successRedirect: '/',
-            failureRedirect: '/signin',
-            failureFlash: true
+            failureRedirect: '/#/signin',
+            // failureFlash: true
         }));
 
     app.get('/signout', users.signout);
